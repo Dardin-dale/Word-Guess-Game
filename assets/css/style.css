@@ -1,0 +1,31 @@
+/* keeps background image to desktop size */
+body {
+    max-width: 960px;
+    background: url('../images/cutting_board.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    margin: auto;
+}
+
+.card {
+    width: 300px;
+    min-height: 150px;
+    float: left;
+    margin: 10px;
+}
+
+.card-text {
+    font-family: monospace; 
+    font-size: 24px;
+}
+
+/* centers cards on small screens */
+@media (max-width: 640px) {
+
+    .row {
+        display: block;
+        margin: 10px auto 10px auto;
+    }
+}

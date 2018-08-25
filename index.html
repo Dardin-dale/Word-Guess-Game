@@ -10,14 +10,100 @@
   <!-- Bootstrap CSS -->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
     crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-  <h1>Chef Ramsey wants you to guess what word he's thinking of.</h1>
+  <h1>What's my recipe missing?</h1>
 
-  <div id="game">
-
+  <div class="row">
+    <div class="col-xs|sm|md|lg|xl-1-12">
+      <div class="card">
+        <div class="card-header">
+          Guess a letter!
+        </div>
+        <div class="card-body">
+          <p class="card-text word"></p>
+        </div>
+      </div>
+    </div>
   </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs|sm|md|lg|xl-1-12">
+      <div class="card">
+        <div class="card-header">
+          Guesses
+        </div>
+        <div class="card-body">
+          <p class="card-text guesses"></p>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-header">
+          Remaining Guesses
+        </div>
+        <div class="card-body">
+          <p class="card-text remain"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-xs|sm|md|lg|xl-1-12">
+      <div class="card">
+        <div class="card-header">
+          Wins
+        </div>
+        <div class="card-body">
+          <p class="card-text wins"></p>
+        </div>
+      </div>
+  </div>
+
+  <!-- displays on win/loss -->
+  <div class="modal fade" id="winModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="winModalCenterTitle">You Win!</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <iframe src="https://giphy.com/embed/glEsn20jvC7iE" width="480" height="211" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" data-dismiss="modal">Play Again</button>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="loseModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="loseModalCenterTitle">You Lose!</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+              <iframe src="https://giphy.com/embed/l3V0H7bYv5Ml5TOfu" width="480" height="324" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary" data-dismiss="modal">Play Again</button>
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
   <!-- Game defined JavaScript and full jQuery -->
   <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
